@@ -29,7 +29,7 @@ func w(a, b, c int) int {
 		result := w(20, 20, 20)
 		results[key] = result
 
-		return w(20, 20, 20)
+		return result
 	}
 
 	if a < b && b < c {
