@@ -54,10 +54,11 @@ function solution(expressions) {
       }
     }
 
-    console.log(xAnswers)
+    
+    console.log(xAnswers);
     if (hasX) {
       console.log(impossibleNs);
-      if (impossibleNs.size === 7) {
+      if (xAnswers.length === 1) {
         const validN = Array.from(Ns)[0];
         const validResult = xAnswers.find((a) => a.n === validN)?.result;
         if (validResult) {
@@ -65,7 +66,7 @@ function solution(expressions) {
           newExp[4] = validResult;
           answer.push(newExp);
         }
-      } else if (impossibleNs.size < 7) {
+      } else if (xAnswers.length > 1) {
         const newExp = [...exps[i]];
         newExp[4] = "?";
         answer.push(newExp);
