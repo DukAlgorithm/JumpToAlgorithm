@@ -9,7 +9,7 @@ def solution(expression):
     operators = ['+', '-', '*'] # 연산자
     exp = re.split(r'(\+|-|\*)', expression) # 피연산자, 연산자가 구분된 리스트 생성
     
-    for operands in permutations(operators, 3):
+    for operands in permutations(operators, 3): # 각 연산자 우선순위 조합에 대해해
         stack = deque(exp)
         for operand in operands:
             result = []
